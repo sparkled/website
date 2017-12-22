@@ -80,12 +80,15 @@ main section h1:first-child {
 }
 
 #intro .intro-container > div {
-  flex-grow: 1;
   padding-right: 20px;
 }
 
-@media (max-width: 575px) {
+#arch-demo {
+  flex-shrink: 0;
+  height: 100px;
+}
 
+@media (max-width: 575px) {
   #intro .intro-container {
     flex-direction: column;
   }
