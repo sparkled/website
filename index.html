@@ -1,100 +1,258 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <title>Sparkled</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="theme-color" content="#4c5c6c"/>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet" type="text/css"/>
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
-    <link href="css/site.css" rel="stylesheet" type="text/css"/>
-  </head>
+﻿<!DOCTYPE html>
+<html lang="en">
 
-  <body>
-    <header>
-      <section>
-        <a href="https://sparkled.io">
-          <img src="img/logo-large.svg"/>
-        </a>
+<head>
+  <meta charset="utf-8">
+  <title>Sparkled</title>
+  <meta name="description" content="Sparkled: The modern LED sequencer"/>
+  <meta name="author" content="Chris Parton">
+  <meta name="keywords" content="sparkled, led, sequencer, chrislights"/>
+  <meta property="og:title" content="Creative Template"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:image:width" content="470"/>
+  <meta property="og:image:height" content="246"/>
+  <meta property="og:site_name" content="Sparkled"/>
+  <meta property="og:description" content="Sparkled: The modern LED sequencer"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#212121"/>
+  <meta name="msapplication-navbutton-color" content="#212121"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="#212121"/>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/colors/color.css"/>
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png"/>
+</head>
 
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 28'%3E%3Cpath d='M0 0h32v6H0V0zm0 11h32v6H0v-6zm0 11h32v6H0v-6z' fill='%23ebebeb'/%3E%3C/svg%3E"/>
-
-        <nav>
-          <a href="https://github.com/sparkled/sparkled" title="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </nav>
-      </section>
-    </header>
-
-    <main>
-      <div id="intro">
-        <section>
-          <h1>The Web-Based LED Sequencer</h1>
-          <div class="intro-container">
-            <div>
-              <p>
-                Sparkled is an easy-to-use LED sequencer that aims to reduce the barrier to entry for lighting projects.
-              </p>
-              <p>
-                Sparkled is designed for smaller hobbyist projects built on top of commodity hardware.
-                For example, a 1000 pixel project can be driven at 60 frames per second running on a Raspberry
-                Pi 3 without breaking a sweat.
-              </p>
+<body>
+  <div class="loader dark">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <rect x="0" y="0" width="4" height="10" fill="#333">
+        <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0" dur="0.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="10" y="0" width="4" height="10" fill="#333">
+        <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.2s" dur="0.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="20" y="0" width="4" height="10" fill="#333">
+        <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.4s" dur="0.6s" repeatCount="indefinite"/>
+      </rect>
+    </svg>
+  </div>
+  <div id="menu-wrap" class="menu-back cbp-af-header dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light mx-lg-0">
+            <a href="index.html">
+              <img src="img/sparkled-logo.svg" class="navbar-logo" alt="Sparkled logo"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> <span class="menu-icon__line menu-icon__line-left"></span>  <span class="menu-icon__line"></span>  <span class="menu-icon__line menu-icon__line-right"></span> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <!-- <li class="nav-item"><a class="nav-link" href="#nav-link-target">Nav link</a></li> -->
+                <li class="nav-item my-2">
+                  <a class="btn btn-primary" href="https://github.com/sparkled/sparkled" target="_blank" role="button">
+                    GitHub
+                  </a>
+                </li>
+              </ul>
             </div>
-
-            <svg id="arch-demo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 103">
-              <path fill="none" stroke="#222" stroke-width="10" stroke-linecap="round"
-                d="M184.6 95.5c0-48.6-40.4-88-89-88S7.4 46.9 7.4 95.5"/>
-
-              <path fill="none" stroke="#666" stroke-width="2"
-                d="M184.6 95.5c0-48.6-40.4-88-89-88S7.4 46.9 7.4 95.5"/>
-                <circle cx="7.4" cy="95.5" r="2"/>
-                <circle cx="7.9" cy="86.2" r="2"/>
-                <circle cx="9.4" cy="77.2" r="2"/>
-                <circle cx="11.7" cy="68.5" r="2"/>
-                <circle cx="14.8" cy="60.2" r="2"/>
-                <circle cx="18.8" cy="52.3" r="2"/>
-                <circle cx="23.5" cy="44.8" r="2"/>
-                <circle cx="28.9" cy="38" r="2"/>
-                <circle cx="34.9" cy="31.6" r="2"/>
-                <circle cx="41.6" cy="25.9" r="2"/>
-                <circle cx="48.7" cy="20.9" r="2"/>
-                <circle cx="56.4" cy="16.6" r="2"/>
-                <circle cx="64.6" cy="13.1" r="2"/>
-                <circle cx="73.1" cy="10.4" r="2"/>
-                <circle cx="82" cy="8.5" r="2"/>
-                <circle cx="91.2" cy="7.6" r="2"/>
-                <circle cx="100.5" cy="7.6" r="2"/>
-                <circle cx="109.7" cy="8.6" r="2"/>
-                <circle cx="118.5" cy="10.5" r="2"/>
-                <circle cx="127.1" cy="13.3" r="2"/>
-                <circle cx="135.2" cy="16.8" r="2"/>
-                <circle cx="142.9" cy="21.1" r="2"/>
-                <circle cx="150.1" cy="26.2" r="2"/>
-                <circle cx="156.8" cy="31.9" r="2"/>
-                <circle cx="162.9" cy="38.2" r="2"/>
-                <circle cx="168.3" cy="45" r="2"/>
-                <circle cx="173.1" cy="52.4" r="2"/>
-                <circle cx="177.1" cy="60.3" r="2"/>
-                <circle cx="180.3" cy="68.6" r="2"/>
-                <circle cx="182.6" cy="77.3" r="2"/>
-                <circle cx="184.1" cy="86.2" r="2"/>
-                <circle cx="184.6" cy="95.5" r="2"/>
-            </svg>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="intro" class="section full-height height-auto-lg hide-over background-dark-blue-3">
+    <div class="hero-center-wrap relative-on-lg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-center text-lg-left align-self-center z-bigger">
+            <h2 class="text-white">The modern LED sequencer.</h2>
+            <p class="mt-3 mb-4 pb-3 font-weight-normal text-white">Create synchronised lighting displays for your home in record time.</p> <a class="btn btn-primary ml-lg-0" href="#" role="button"><span>Coming Soon</span></a>
           </div>
-        </section>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <div class="img-wrap header-img">
+              <img src="img/sparkled-house.svg" alt="House with lighting display, powered by Sparkled"/>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+  <div class="section padding-top-bottom-big background-gradient-dark" id="concept">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap text-center">
+            <h3 class="text-white">What is Sparkled?</h3>
+          </div>
 
-      <div id="section-2">
-        <section>
-          <h1>Sequence, Schedule, Serve, Sparkle!</h1>
-          <p>
-            This website is still under construction. Check back soon!
-          </p>
-        </section>
+        </div>
+        <div class="col-md-4">
+          <div class="concept-box">
+            <h5 class="text-white">Modern</h5>
+            <p class="text-grey">The Sparkled web interface is designed to be fun and productive on all kinds of devices.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-md-0">
+          <div class="concept-box">
+            <h5 class="text-white">Fun</h5>
+            <p class="text-grey">Sparkled is designed with tech-savvy hobbyists in mind. Build something awesome and share your knowledge with the community!</p>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-md-0">
+          <div class="concept-box">
+            <h5 class="text-white">Open</h5>
+            <p class="text-grey">Sparkled is and will always be open source. You can use it for free, and build whatever you want on top of the Sparkled API to make your installation extra amazing.</p>
+          </div>
+        </div>
+        <div class="col-md-12 padding-top-bottom">
+          <div class="line-sep"></div>
+        </div>
       </div>
-    </main>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mt-5">
+          <h4 class="text-white">1. Design your stage</h4>
+          <p class="text-grey">A stage represents the objects that make up your lighting installation. We call these objects "stage props".</p>
+        </div>
+        <div class="col-md-6 mt-5">
+          <h4 class="text-white">2. Create your sequences</h4>
+          <p class="text-grey">Add awesome lighting effects to your stage props, all synchronised to audio of your choice.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mt-5">
+          <h4 class="text-white">3. Create some playlists</h4>
+          <p class="text-grey">Group your sequences into playlists, which can be scheduled to run whenever you like.</p>
+        </div>
+        <div class="col-md-6 mt-5">
+          <h4 class="text-white">4. Let it sparkle!</h4>
+          <p class="text-grey">Enjoy the show (and show off your creation to the Sparkled community!)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section padding-top-bottom-big background-gradient-dark" id="faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap text-center">
+            <h3 class="text-white">FAQ</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="accordion" class="accordion-style">
+            <div class="card">
+              <div class="card-header" id="headingOne"> <a class="text-white background-dark-blue-2" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> How much does Sparkled cost? </a>
+              </div>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <h6 class="text-white">How much does Sparkled cost?</h6>
+                  <p class="text-grey">Nothing at all! Sparkled is open source and 100% free. There may be options to donate to the project or purchase an official training course in the future, but Sparkled itself will always be free.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo"> <a class="collapsed text-white background-dark-blue-2" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> What skills do I need? </a>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <h6 class="text-white">What skills do I need?</h6>
+                  <p class="text-grey">To install Sparkled and start creating sequences, all you need is a computer.</p>
+                  <p class="text-grey">When you're ready to build your installation, you'll be doing some simple wiring, soldering and networking. Don't worry, you'll get plenty of help along the way!</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree"> <a class="collapsed text-white background-dark-blue-2" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> What equipment do I need? </a>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  <h6 class="text-white">What equipment do I need?</h6>
+                  <p class="text-grey">To run Sparkled, you'll need a computer and a wireless router to control the lighting installation.</p>
+                  <p class="text-grey">To put together your physical stage props, you'll need a soldering iron and basic electrical tools like wire strippers.</p>
+                  <p class="text-grey">Most importantly, you'll need common sense around electricity. You'll never have to work with dangerous voltages, but safety first nonetheless!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div id="accordion-snd" class="accordion-style">
+            <div class="card">
+              <div class="card-header" id="headingFour"> <a class="text-white background-dark-blue-2" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"> When will Sparkled be available? </a>
+              </div>
+              <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion-snd">
+                <div class="card-body">
+                  <h6 class="text-white">When will Sparkled be available?</h6>
+                  <p class="text-grey">A beta version of Sparkled is slated for release in late 2019 or early 2020.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingFive"> <a class="collapsed text-white background-dark-blue-2" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Why should I choose Sparkled? </a>
+              </div>
+              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion-snd">
+                <div class="card-body">
+                  <h6 class="text-white">Why should I choose Sparkled?</h6>
+                  <p class="text-grey">Sparkled is designed to empower DIY-ers and hobbyists to create lighting installations with minimal time and cost.</p>
+                  <p class="text-grey">There are other excellent solutions such as <a href="https://lightorama.com" target="_blank">Light-O-Rama</a>, but you might find yourself spending hundreds or thousands of dollars on specialised equipment.</p>
+                  <p class="text-grey">Also, Sparkled has a modern web interface, which means you can productively work on your LED sequences from any kind of device.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingSix">
+                <a class="collapsed text-white background-dark-blue-2" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">How can I contribute?</a>
+              </div>
+              <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion-snd">
+                <div class="card-body">
+                  <h6 class="text-white">How can I contribute?</h6>
+                  <p class="text-grey">Thanks for asking! Right now, the best way to help Sparkled grow is to spread the word and help build the Reddit and Discord communities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section py-4 background-dark-blue-4">
+      <div class="container">
+        <div class="row">
+            <div class="col">
+              <span>Copyright &copy; <span id="current-year"></span> Chris Parton</span>
+              <a class="app-btn ml-3" href="https://chrisparton.net" target="_blank"><i class="fa fa-globe"></i></a>
+              <a class="app-btn ml-3" href="https://twitter.com/chrislights_" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a class="app-btn ml-3" href="https://linkedin.com/in/chrisparton1991" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+    document.querySelector('#current-year').innerHTML = new Date().getFullYear();
+  </script>
+</body>
 
-    <script type="text/javascript" src="js/site.js"></script>
-  </body>
 </html>
